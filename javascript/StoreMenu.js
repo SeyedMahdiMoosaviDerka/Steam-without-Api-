@@ -1,5 +1,5 @@
-StoreMenuBackVideoInterval = setInterval(() => {
-  StoreMenuBackgroundVideo.play();
-}, 1);
+// StoreMenuBackVideoInterval = setInterval(() => {
+//   StoreMenuBackgroundVideo.play();
+// }, 1);
 
 // clearInterval(StoreMenuBackVideoInterval);
