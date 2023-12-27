@@ -1,0 +1,260 @@
+#RecommendedSlideShow {
+  width: 950px;
+  height: 400px;
+
+  /* background-color: black; */
+  color: white;
+  /* border: 1px solid green; */
+
+  text-indent: 50px;
+  cursor: default;
+  text-shadow: 0px 0px 10px black;
+
+  position: relative;
+
+  margin: auto;
+  /* position: absolute;
+  top: 100px;
+  right: 0; */
+}
+
+#RecommendedSlideShow > .galleryHolder {
+  /* border: 1px solid green; */
+
+  width: 90%;
+  height: 90%;
+
+  margin-top: 10px;
+  position: absolute;
+  left: 50px;
+
+  overflow: hidden;
+}
+
+.galleryHolder > #RecommendedSlideShow_gallery {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+
+  opacity: 1;
+
+  /* background-color: wheat; */
+
+  /* top: 20px; */
+  /* animation: nextSlide 0.4s linear; */
+}
+
+@keyframes nextSlide {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#RecommendedSlideShow_gallery > .items {
+  width: 100%;
+  height: 100%;
+
+  /* border: 2px solid red; */
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+#RecommendedSlideShow_gallery > .items > .BigShow {
+  width: 65%;
+  height: 100%;
+
+  background-color: green;
+  box-shadow: 0px 0 10px 1px black;
+  position: relative;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+#RecommendedSlideShow_gallery > .items > .detail {
+  width: 35%;
+  height: 100%;
+  /* padding: 0; */
+
+  background-color: #0a141d;
+  display: flex;
+  flex-flow: column;
+  gap: 0;
+
+  cursor: default;
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > h1 {
+  height: 40px;
+  width: 100%;
+
+  font-size: 20px;
+
+  text-align: left;
+  line-height: 50px;
+
+  text-indent: 0px;
+  margin-top: 10px;
+  margin-left: 20px;
+
+  /* border: 1px solid red; */
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .minigal {
+  /* height: 170px; */
+  width: 100%;
+
+  margin-top: 10px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /* column-gap: 0px; */
+  gap: 0px;
+
+  /* border: 1px solid red; */
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .minigal > .items_img:hover {
+  opacity: 1;
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .minigal > .items_img {
+  opacity: 0.5;
+  height: 65px;
+  width: 140px;
+
+  cursor: pointer;
+
+  /* background-color: red; */
+
+  border: 5px solid;
+  border-color: transparent;
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .title {
+  /* height: 35px; */
+  width: 100%;
+
+  margin-left: 10px;
+  margin-top: 10px;
+  text-indent: 0px;
+
+  /* border: 1px solid red; */
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .tags {
+  height: 20px;
+  width: 100%;
+  margin-top: 15px;
+  margin-left: 10px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  gap: 10px;
+
+  /* border: 1px solid red; */
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .tags > .items_tags:hover {
+  background-color: gray;
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .tags > .items_tags {
+  height: 20px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 2px;
+
+  font-size: 10px;
+  text-align: center;
+  text-indent: 0;
+  line-height: 20px;
+
+  background-color: rgba(128, 128, 128, 0.751);
+
+  cursor: pointer;
+}
+
+#RecommendedSlideShow_gallery > .items > .detail > .price {
+  height: 15px;
+  width: 100%;
+
+  margin-top: 35px;
+  text-indent: 10px;
+  font-size: 12px;
+
+  /* border: 1px solid red; */
+}
+
+#RecommendedSlideShow > #RecommendedSlideShow_RightBottom:hover {
+  background-image: linear-gradient(
+    to right,
+    #1b2838,
+    rgba(255, 255, 255, 0.1)
+  );
+}
+
+#RecommendedSlideShow > #RecommendedSlideShow_RightBottom {
+  width: 40px;
+  height: 100px;
+
+  background-image: linear-gradient(to right, #1b2838, #152132);
+  cursor: pointer;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 150px;
+  right: 0;
+}
+#RecommendedSlideShow > #RecommendedSlideShow_RightBottom > img {
+  width: 40px;
+  height: 80px;
+
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+
+#RecommendedSlideShow > #RecommendedSlideShow_LeftBottom:hover {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1),
+    #1b2838
+  );
+}
+#RecommendedSlideShow > #RecommendedSlideShow_LeftBottom {
+  width: 40px;
+  height: 100px;
+
+  background-image: linear-gradient(to right, #152132, #1b2838);
+
+  cursor: pointer;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 150px;
+  left: 0;
+}
+#RecommendedSlideShow > #RecommendedSlideShow_LeftBottom > img {
+  width: 40px;
+  height: 80px;
+
+  transform: rotateY(180deg);
+
+  position: absolute;
+  left: 0px;
+  top: 10px;
+}

@@ -1,0 +1,228 @@
+#ShowingModal {
+  width: 100%;
+  height: 85%;
+
+  /* border: 1px solid green; */
+
+  z-index: 999;
+  position: absolute;
+
+  transition: 0.5s;
+
+  background-color: #1b2838;
+}
+
+.hidingModal_Search {
+  opacity: 0;
+  top: -2000px;
+}
+.ShowingModal_Search {
+  opacity: 1;
+  top: 170px;
+}
+
+#ShowingModal > #closeModal {
+  transition: 0.4s;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+
+  background: url(../Media/Search/close_modal.svg) no-repeat;
+  background-size: 100% 100%;
+
+  opacity: 0.7;
+
+  position: absolute;
+  top: 0px;
+  left: 150px;
+}
+
+#ShowingModal > #closeModal:hover {
+  opacity: 1;
+  scale: 1.2;
+}
+
+#ShowingModal > .holder {
+  /* border: 1px red solid; */
+  margin: auto;
+
+  width: 900px;
+
+  transform: translateX(25px);
+}
+
+#Modal_GameName {
+  font-size: 26px;
+  color: white;
+
+  font-weight: normal;
+}
+
+#PicShow {
+  /* border: 1px solid white; */
+
+  width: 70%;
+  height: 400px;
+}
+
+#PicShow > #Modal_BigPic {
+  width: 100%;
+  height: 80%;
+
+  background-color: red;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+#PicShow > .ModalPic_holder {
+  width: 100%;
+  height: 20%;
+
+  /*   background-color: black; */
+
+  margin-top: 10px;
+  margin-left: 15px;
+
+  display: flex;
+  gap: 5px;
+}
+
+#PicShow > .ModalPic_holder > .pictuars:hover {
+  opacity: 1;
+}
+
+#PicShow > .ModalPic_holder > .pictuars {
+  cursor: pointer;
+  transition: 0.5s;
+
+  width: 150px;
+  height: 100%;
+  /*   border: 1px solid white; */
+
+  opacity: 0.5;
+}
+
+#ShowingModal > .holder > .pic_Detail_holder {
+  display: flex;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 435px;
+}
+
+#ShowingModal > .holder > .pic_Detail_holder > .detailModal {
+  width: 30%;
+
+  /* border: 1px solid yellow; */
+  height: 400px;
+
+  margin-left: 20px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+
+#ShowingModal > .holder > .pic_Detail_holder > .detailModal :nth-child(3) {
+  margin-bottom: 20px;
+}
+
+#ShowingModal > .holder > .pic_Detail_holder > .detailModal > .holder {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 30px;
+
+  height: fit-content;
+}
+
+#ShowingModal > .holder > .pic_Detail_holder > .detailModal > .holder > h3 {
+  color: #556772;
+
+  font-size: 10px;
+  text-transform: uppercase;
+
+  font-weight: 100;
+  line-height: 0px;
+}
+
+#ShowingModal > .holder > .pic_Detail_holder > .detailModal > .holder > h2 {
+  color: #8f98a0;
+  font-size: 12px;
+
+  line-height: 0px;
+}
+
+#onvanPic {
+  width: 100%;
+  height: 130px;
+}
+
+#GameDiscription {
+  font-size: 13px;
+  color: #c6d4df;
+  line-height: 16px;
+
+  max-height: 120px;
+}
+
+#ShowingModal > .holder > .Add {
+  /* border: 1px solid red; */
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  margin-top: 15px;
+
+  width: 100%;
+  height: 50px;
+
+  position: relative;
+}
+
+#ShowingModal > .holder > .Add > #AddCartBT:hover {
+  background-image: linear-gradient(to right, #67c1f5ce, #67c1f576);
+  color: white;
+}
+
+#ShowingModal > .holder > .Add > #AddCartBT {
+  width: 160px;
+  height: 30px;
+  border-radius: 2px;
+
+  display: block;
+
+  background-color: #67c1f546;
+  color: #67c1f5;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 10px;
+  left: 20px;
+
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+#ShowingModal > .holder > .Add > #AddWishListBT:hover {
+  background-image: linear-gradient(to right, #67c1f5ce, #67c1f576);
+  color: white;
+}
+
+#ShowingModal > .holder > .Add > #AddWishListBT {
+  width: 140px;
+  height: 30px;
+  border-radius: 2px;
+
+  display: block;
+
+  background-color: #67c1f546;
+  color: #67c1f5;
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 10px;
+  left: 200px;
+
+  text-align: center;
+  line-height: 30px;
+  font-size: 15px;
+}

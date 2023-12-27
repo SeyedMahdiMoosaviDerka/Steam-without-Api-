@@ -1,0 +1,18 @@
+#StoreSection {
+  position: relative;
+
+  height: 200%;
+}
+
+#StoreSection > .otherholder {
+  display: flex;
+  flex-flow: column;
+
+  width: 70%;
+
+  /* border: 1px solid red; */
+
+  position: absolute;
+  top: 500px;
+  right: 200px;
+}

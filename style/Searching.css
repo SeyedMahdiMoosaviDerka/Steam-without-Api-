@@ -1,0 +1,516 @@
+#SearchingHolder {
+  width: 900px;
+
+  /* border: 1px solid red; */
+  margin: auto;
+
+  transition: 1s /* opacity */;
+  /*   cursor: pointer; */
+
+  position: relative;
+  /* display: none; */
+}
+
+#SearchingHolder.hide {
+  opacity: 0;
+  height: 0px;
+  /* transform: translateX(-2000px) translateY(-1410px); */
+}
+#SearchingHolder.show {
+  opacity: 1;
+  height: auto;
+  transform: translateY(-70px) translateX(25px);
+}
+
+#SearchingHolder > .searched {
+  color: white;
+  position: absolute;
+  left: 40px;
+  top: 120px;
+  /* border: 1px solid red; */
+}
+
+#SearchingHolder > .searchingBackground {
+  width: 100%;
+  height: 230px;
+
+  /* position: relative;
+  z-index: 500; */
+  /* border: 1px solid red; */
+
+  background: url(../Media/Search/cluster_bg.png) bottom center no-repeat;
+  /* background-size: 100% 100%; */
+}
+
+#SearchingHolder > .DetailHolder {
+  width: 120%;
+  height: auto;
+
+  margin-top: 10px;
+
+  /* background-color: black; */
+  transform: translateX(-100px) translateY(-30px);
+  display: flex;
+  gap: 0;
+}
+
+#SearchingHolder > .DetailHolder > .showing {
+  width: 70%;
+  height: auto;
+
+  /* border: 1px solid red; */
+}
+
+#ShowResualt {
+  position: absolute;
+  left: 40px;
+  top: 2px;
+
+  width: fit-content;
+  height: fit-content;
+
+  color: lightgoldenrodyellow;
+  font-size: 14px;
+
+  text-indent: 0;
+}
+
+#SearchingHolder > .DetailHolder > .showing > .sortINshow {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  /*   border: 1px solid red; */
+
+  position: relative;
+
+  border-radius: 5px;
+  color: #4c6c8c;
+  font-size: 12px;
+  line-height: 37px;
+  /* text-align: right; */
+  text-indent: 500px;
+}
+
+/* .sortINshow > .SelectingSortInShow:hover {
+  background-color: #67c1f59b;
+  color: white;
+} */
+
+.sortINshow > .SelectingSortInShow {
+  transition: 0.2s;
+
+  width: 120px;
+  height: 20px;
+  background: url(../Media/Search/morepic.png) no-repeat 90% 54%;
+  background-size: 15px;
+  background-color: #67c1f522;
+  border-radius: 5px;
+
+  position: absolute;
+  top: 10px;
+  right: 90px;
+  /*  border: 1px solid red; */
+
+  text-indent: 10px;
+  line-height: 20px;
+  color: #67c1f5;
+
+  cursor: pointer;
+}
+
+.sortINshow > .SelectingSortInShow > ul {
+  transition: 0.5s;
+  /* border: 1px solid red; */
+  width: 150px;
+
+  transform: translateX(-10px) translateY(0px);
+  border-radius: 5px;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: #417a9b;
+
+  position: relative;
+  z-index: 900;
+}
+
+.sortINshow > .SelectingSortInShow > ul > li:hover {
+  opacity: 1;
+  background-image: linear-gradient(-60deg, #417a9b 5%, #67c1f5 95%);
+}
+
+.sortINshow > .SelectingSortInShow > ul > li {
+  /* border: 1px solid red; */
+  opacity: 0.8;
+  margin-top: 5px;
+  width: 100%;
+}
+
+/*-------------------------------------sorting---------------------------------*/
+
+#SearchingHolder > .DetailHolder > .sorting {
+  width: 28%;
+  height: auto;
+
+  margin-left: 20px;
+
+  /* border: 1px solid green; */
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+
+#SearchingHolder > .DetailHolder > .sorting > .items {
+  transition: 0.5s;
+  overflow: hidden;
+
+  border: 1px solid #323e4c;
+  border-radius: 2px;
+  width: 100%;
+}
+
+#SearchingHolder > .DetailHolder > .sorting > .items > h3 {
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+
+  background-color: #323e4c;
+  color: #c7d5e0;
+  font-size: 12px;
+  line-height: 30px;
+  text-indent: 10px;
+
+  cursor: pointer;
+  position: relative;
+}
+
+#NarroPriceSectionMore,
+#NarroTagSectionMore,
+#NarroOSSectionMore {
+  transition: 0.7s;
+  width: 15px;
+  height: 15px;
+
+  background: url(../Media/Search/morepic.png) no-repeat;
+  background-size: 15px;
+
+  position: absolute;
+}
+
+.MoreArrow {
+  transform: rotate(0deg);
+  top: 12px;
+  right: 20px;
+}
+.lessArrow {
+  transform: rotate(-90deg);
+  top: 8px;
+  right: 15px;
+}
+
+#SearchingHolder > .DetailHolder > .sorting > .items > .price_range {
+  width: 90%;
+  height: 70px;
+
+  margin: auto;
+
+  border-bottom: 2px solid #323e4c;
+  margin-bottom: 5px;
+
+  text-align: center;
+  color: #c7d5e0;
+  font-size: 18px;
+  line-height: 70px;
+}
+
+#PriceRangeInput:hover {
+  opacity: 1;
+}
+
+#PriceRangeInput {
+  transition: 0.5s;
+
+  width: 90%;
+  margin-left: 15px;
+  margin-top: 30px;
+  max-height: 5px;
+
+  opacity: 0.8;
+
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#PriceRangeInput::-moz-range-thumb {
+  border: 0;
+  border-radius: 50%;
+
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  box-shadow: 0 0 10px 1px black;
+}
+
+#PriceRangeInput::-moz-range-track {
+  height: 5px;
+  background-color: #67c1f5;
+  border-radius: 5px;
+}
+
+/*                                              Checkbox:                                                */
+.checkboxHolder {
+  width: 95%;
+  height: auto;
+
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.checkboxHolder > input:checked + label {
+  transition: 1s;
+  background: url(../Media/Search/checkBox.png) no-repeat 7% 50%;
+  background-size: 15px;
+
+  background-color: #67c1f5;
+  color: white;
+  opacity: 1;
+}
+
+.checkboxHolder > input {
+  display: none;
+}
+
+.checkboxHolder > label:hover {
+  background-color: #323e4c;
+  opacity: 1;
+  color: white;
+}
+.checkboxHolder > label {
+  width: 275px;
+  height: 25px;
+  cursor: pointer;
+  color: #c7d5e0;
+  font-size: 14px;
+
+  opacity: 0.7;
+
+  line-height: 27px;
+  text-indent: 40px;
+
+  background: url(../Media/Search/uncheckBox.png) no-repeat 7% 50%;
+  background-size: 15px;
+  /*   border: 1px solid red; */
+
+  display: block;
+  margin-top: 10px;
+}
+
+/* ---------------------------------------ShowingGrid---------------------------- */
+#ShowingGrid {
+  /*   border: 1px solid red; */
+
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#ShowingGrid > .items:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #323e4c;
+}
+
+#ShowingGrid > .items {
+  transition: 0.4s;
+  margin-top: 10px;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 10px;
+  overflow: hidden;
+
+  border-radius: 5px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  height: 50px;
+}
+
+#ShowingGrid > .items > img {
+  height: 100%;
+  width: 130px;
+}
+
+#ShowingGrid > .items > .NameAndSystem {
+  height: 100%;
+  width: 300px;
+
+  /* border: 1px solid gray; */
+
+  position: relative;
+}
+
+#ShowingGrid > .items > .NameAndSystem > .Name {
+  /*   border: 1px solid red; */
+
+  height: fit-content;
+  width: fit-content;
+
+  color: #c7d5e0;
+  font-size: 14px;
+  margin: 0;
+
+  position: absolute;
+  top: 7px;
+  left: 5px;
+}
+
+#ShowingGrid > .items > .NameAndSystem > .System {
+  /* border: 1px solid green; */
+
+  height: 40%;
+  width: 100px;
+
+  position: absolute;
+  bottom: 5px;
+  left: 2px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1px;
+}
+
+#ShowingGrid > .items > .NameAndSystem > .System > span:hover {
+  opacity: 1;
+  scale: 1.2;
+}
+
+#ShowingGrid > .items > .NameAndSystem > .System > span {
+  transition: 0.5s;
+  /* border: 1px solid green; */
+
+  height: 100%;
+  width: 20px;
+
+  opacity: 0.7;
+}
+
+#ShowingGrid > .items > .NameAndSystem > .System > .macOS {
+  background: url(../Media/Search/icon_platform_mac.png) no-repeat;
+  background-size: 100% 100%;
+}
+#ShowingGrid > .items > .NameAndSystem > .System > .Windows {
+  background: url(../Media/Search/icon_platform_win.png);
+  background-size: 100% 100%;
+}
+#ShowingGrid > .items > .NameAndSystem > .System > .SteamOSLinux {
+  background: url(../Media/Search/icon_platform_linux.png);
+  background-size: 100% 100%;
+}
+
+#ShowingGrid > .items > .ReleaseDate {
+  width: 85px;
+  color: #4c6c8c;
+  font-size: 11px;
+  line-height: 50px;
+  text-align: center;
+
+  /* border: 1px solid red; */
+}
+
+#ShowingGrid > .items > .Review:hover {
+  opacity: 1;
+}
+
+#ShowingGrid > .items > .Review {
+  transition: 0.5s;
+  /*   border: 1px solid red; */
+  opacity: 0.7;
+  border-radius: 1px;
+
+  width: 18px;
+  height: 18px;
+
+  margin-top: 16px;
+}
+
+.review.positive {
+  background: url(../Media/Search/user_reviews_positive.png) no-repeat;
+  background-size: 100% 100%;
+}
+.review.negative {
+  background: url(../Media/Search/user_reviews_negative.png) no-repeat;
+  background-size: 100% 100%;
+}
+.review.mixed {
+  background: url(../Media/Search/user_reviews_mixed.png) no-repeat;
+  background-size: 100% 100%;
+}
+
+#ShowingGrid > .items > .Discount_pct {
+  /* border: 1px solid red; */
+
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-weight: 500;
+  color: #beee11;
+  background: #4c6b22;
+  display: inline-block;
+
+  height: fit-content;
+  width: fit-content;
+
+  margin-top: 11px;
+
+  padding: 5px;
+
+  font-size: 15px;
+}
+
+#ShowingGrid > .items > .ShowingPrice {
+  /* border: 1px solid red; */
+
+  display: flex;
+  flex-flow: column wrap;
+
+  padding-top: 12px;
+  margin-left: 70px;
+}
+#ShowingGrid > .items > .ShowingPrice > .FirstPrice {
+  width: fit-content;
+  color: #738895;
+  font-size: 11px;
+  line-height: 12px;
+
+  text-decoration: line-through;
+}
+
+#ShowingGrid > .items > .ShowingPrice > .PriceWithDiscount {
+  color: #beee11;
+  font-size: 13px;
+}
+
+/* nothing found text: */
+
+#ShowingGrid > .nothingF {
+  color: black;
+  opacity: 0.6;
+  font-size: 24px;
+
+  width: 300px;
+  text-align: center;
+
+  margin: auto;
+  margin-top: 50px;
+
+  text-shadow: 0 0px 10px white;
+}

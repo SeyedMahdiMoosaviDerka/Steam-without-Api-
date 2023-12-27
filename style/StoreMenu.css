@@ -1,0 +1,158 @@
+#StoreSection {
+  border-radius: 0 0 10px 10px;
+  /* border: 1px solid green; */
+
+  width: 100%;
+  display: block;
+  /* height: 10px; */
+  /* display: none; */
+  /*   display: flex;
+  flex-flow: column;
+  gap: 0px; */
+}
+
+.StoreMenu {
+  /* border: 1px solid red; */
+
+  overflow: hidden;
+  width: 100%;
+  /* height: 70px; */
+
+  position: relative;
+}
+
+.StoreMenu > .StoreMenu_WishListCart {
+  height: 19px;
+  width: 180px;
+
+  /* border: 1px solid red; */
+  position: absolute;
+  z-index: 500;
+  top: 7px;
+  right: 320px;
+
+  display: flex;
+  gap: 2px;
+}
+
+.StoreMenu > .StoreMenu_WishListCart > .items:hover {
+  color: black;
+}
+.StoreMenu > .StoreMenu_WishListCart > .items {
+  transition: 0.3s;
+  height: 19px;
+  cursor: pointer;
+
+  /* background-color: black; */
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 19px;
+
+  box-shadow: 0 0 3px 1px black;
+}
+
+.StoreMenu > .StoreMenu_WishListCart > .WishList:hover {
+  background-image: linear-gradient(to right, #f1f2f3, #9aa2aa);
+}
+.StoreMenu > .StoreMenu_WishListCart > .WishList {
+  width: 200px;
+  background-color: #6b939f;
+}
+.StoreMenu > .StoreMenu_WishListCart > .Cart:hover {
+  background-color: #88ac04;
+}
+.StoreMenu > .StoreMenu_WishListCart > .Cart {
+  width: 150px;
+  background-color: #668001;
+}
+
+.StoreMenu > .StoreMenu_Top {
+  width: 850px;
+  height: 30px;
+
+  background-image: linear-gradient(to right, #3b6591, #1c2f4c);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.429);
+
+  position: absolute;
+  top: 30px;
+  right: 20.8vw;
+  /*   margin: auto; */
+  z-index: 100;
+
+  display: flex;
+  gap: 10px;
+}
+
+.StoreMenu > .StoreMenu_Top > .items:not(.Search):hover {
+  background-image: linear-gradient(to right, #2f7ebea0, #33567321);
+}
+
+.StoreMenu > .StoreMenu_Top > .items {
+  width: 210px;
+  height: 30px;
+
+  /*  border: 1px solid red;
+    background-color: gray; */
+
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 14px;
+  text-shadow: 0px 0px 10px black;
+
+  cursor: pointer;
+}
+
+.StoreMenu > .StoreMenu_Top > .YourStore {
+  width: 270px;
+  text-indent: 20px;
+
+  position: relative;
+}
+
+.StoreMenu > .StoreMenu_Top > .YourStore > .YourStoreProfile {
+  width: 15px;
+  height: 15px;
+
+  position: absolute;
+  left: 7px;
+  top: 7px;
+}
+
+.StoreMenu > .StoreMenu_Top > .Noteworthy {
+  width: 380px;
+}
+
+.StoreMenu > .StoreMenu_Top > .News,
+.StoreMenu > .StoreMenu_Top > .Labs {
+  width: 120px;
+}
+
+.StoreMenu > .StoreMenu_Top > .Search {
+  margin-top: 2.5px;
+  margin-right: 3px;
+  height: 25px;
+  background-color: #316282;
+
+  text-align: left;
+  text-indent: 10px;
+  color: black;
+  text-shadow: 0 0 5px white;
+  cursor: text;
+
+  margin-left: 80px;
+  border: 0px;
+  border-radius: 5px;
+
+  outline: none;
+  /* outline-color: #4c9acc;
+    outline-style: dashed;
+    outline-offset: 0;
+    outline-width: 0; */
+}
+
+#StoreMenuBackgroundVideo {
+  width: 130%;
+  transform: translateX(-170px);
+}

@@ -1,0 +1,89 @@
+#ShortCutsTitles {
+  width: 20%;
+  height: auto;
+
+  /* border: 1px solid green; */
+}
+
+#ShortCutsTitles > .items {
+  width: 200px;
+  /* height: 200px; */
+
+  float: right;
+
+  margin-right: 20px;
+
+  /* border: 1px solid red; */
+}
+
+#ShortCutsTitles > .items > h1 {
+  color: #536f86;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-weight: bolder;
+
+  opacity: 0.5;
+
+  line-height: 16px;
+  margin: 7px 0;
+}
+
+#ShortCutsTitles > .items > h2:hover {
+  color: #66c0f4;
+}
+
+#ShortCutsTitles > .items > h2 {
+  color: #a4b3c4;
+  font-size: 12px;
+
+  font-weight: 550;
+
+  width: fit-content;
+
+  cursor: pointer;
+  line-height: 10px;
+}
+#ShortCutsTitles > .it1 {
+  margin-top: 30px;
+}
+#ShortCutsTitles > .it1 > img {
+  width: 180px;
+  height: 70px;
+
+  cursor: pointer;
+}
+
+#ShortCutsTitles > .it1:hover > h1 {
+  color: #dddddd;
+}
+#ShortCutsTitles > .it1 > h1 {
+  font-size: 14px;
+  color: #88bde9;
+
+  font-weight: 100;
+  font-family: "Motiva Sans", Sans-serif;
+
+  line-height: 16px;
+
+  cursor: pointer;
+}
+
+#ShortCutsTitles > .it1:hover > h2 {
+  color: #dddddd;
+}
+#ShortCutsTitles > .it1 > h2 {
+  display: block;
+  width: fit-content;
+  color: #a4b3c4;
+  font-size: 12px;
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: normal;
+  font-weight: 550;
+
+  line-height: 0;
+  margin-bottom: 25px;
+
+  cursor: pointer;
+}
