@@ -21,7 +21,7 @@ function Going_SearchingSection() {
 
   clearInterval(StoreMenuBackVideoInterval);
 
-  CloseModalFunction();
+  //CloseModalFunction();
   selecting(1);
 }
 
@@ -30,7 +30,7 @@ function Going_StoreSection() {
   ShortCutsTitles.style.display = "block";
   otherholder.style.display = "block";
 
-  StoreMenuBackgroundVideo.src = "../Media/StoreMenu/webm_page_bg_english.mp4";
+  StoreMenuBackgroundVideo.src = "Media/StoreMenu/webm_page_bg_english.mp4";
 
   SearchingHolder.className = "hide";
 
@@ -38,7 +38,7 @@ function Going_StoreSection() {
     StoreMenuBackgroundVideo.play();
   }, 1);
 
-  CloseModalFunction();
+  //CloseModalFunction();
   selecting(0);
 }
 
@@ -48,18 +48,22 @@ function Going_AboutSection() {
 
   clearInterval(StoreMenuBackVideoInterval);
 
-  CloseModalFunction();
+  //CloseModalFunction();
   selecting(2);
 }
+
 function Going_SupportSection() {
   StoreSection.style.display = "none";
   SearchingHolder.className = "hide";
 
   clearInterval(StoreMenuBackVideoInterval);
 
-  CloseModalFunction();
+  //CloseModalFunction();
   selecting(3);
 }
+
+/* default postition => */
+Going_StoreSection();
 
 /* Going_SearchingSection(); */
 MainSearch.onclick = function () {
@@ -101,8 +105,7 @@ function SelectingSortInShowDiSelected() {
 }
 
 SelectingSortInShow.onmouseenter = function () {
-  SelectingSortInShow.style.color = "white";
-  SelectingSortInShow.style.backgroundColor = "#67c1f59b";
+  SelectingSortInShowSelected();
 };
 SelectingSortInShow.onmouseleave = function () {
   if (picerSelected == false) {
