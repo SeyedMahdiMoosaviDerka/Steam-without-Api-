@@ -417,7 +417,9 @@
     if (!localStorage.getItem('reloaded')) {
         // If not reloaded yet, reload the page
         localStorage.setItem('reloaded', true);
-        location.reload();
+        for(i=0 ; i<4 ; i++){
+          location.reload();
+        }       
     } else {
         // If already reloaded, remove the 'reloaded' flag from localStorage
         localStorage.removeItem('reloaded');

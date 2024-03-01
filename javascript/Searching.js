@@ -36,7 +36,7 @@ function Going_StoreSection() {
 
   StoreMenuBackVideoInterval = setInterval(() => {
     StoreMenuBackgroundVideo.play();
-  }, 1);
+  }, 100);
 
   //CloseModalFunction();
   selecting(0);
