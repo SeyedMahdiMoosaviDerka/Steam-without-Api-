@@ -5,6 +5,10 @@
 
 function ShowGamesInWishListBT() {
   bas_WishList = JSON.parse(localStorage.getItem("basket_WishList"));
+  bas = [];
+  if (bas_WishList == null) {
+    localStorage.setItem("basket_WishList", JSON.stringify(bas));
+  }
   Bas_WishList_Quantity = bas_WishList.length;
   OpenWishListBT.innerHTML = "WishList(" + Bas_WishList_Quantity + ")";
 }
@@ -156,16 +160,23 @@ function OpenWishList() {
 
 /* Animations for WishList: */
 function OpenWishListAnim() {
+  /* WishList Css */
   WishList.style.zIndex = "999";
   WishList.style.transform = " translateX(0px) translateY(0px)";
   WishList.style.opacity = "1";
   WishList.style.width = "100%";
   WishList.style.height = "100%";
 
+  /* HolderWishList Css */
   HolderWishList.style.height = "50px";
   HolderWishList.style.width = "50px";
   HolderWishList.style.transform = "translateX(450px) translateY(-400px) ";
   HolderWishList.style.opacity = "0";
+  let Temp = HolderWishList.innerHTML;
+  HolderWishList.innerHTML = "";
+  setTimeout(() => {
+    HolderWishList.innerHTML = Temp;
+  }, 2300);
 
   setTimeout(() => {
     HolderWishList.style.transform = "translateX(450px) translateY(200px) ";
@@ -190,11 +201,20 @@ function OpenWishListAnim() {
   }, 500);
 }
 function CloseWishListAnim() {
+  /* WishList Css */
   CloseWishListBT.style.opacity = "0";
   CloseWishListBT.style.transform = "translateY(-200px)";
 
+  /* HolderWishList Css */
   HolderWishList.style.width = "50px";
   HolderWishList.style.transform = "translateX(450px) ";
+  let Temp = HolderWishList.innerHTML;
+  setTimeout(() => {
+    HolderWishList.innerHTML = "";
+  }, 150);
+  setTimeout(() => {
+    HolderWishList.innerHTML = Temp;
+  }, 2300);
 
   setTimeout(() => {
     HolderWishList.style.height = "50px";

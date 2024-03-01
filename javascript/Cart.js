@@ -5,6 +5,10 @@
 
 function ShowGamesInCartBT() {
   bas_Cart = JSON.parse(localStorage.getItem("basket"));
+  bas = [];
+  if (bas_Cart == null) {
+    localStorage.setItem("basket", JSON.stringify(bas));
+  }
   BasQuantity = bas_Cart.length;
   OpenCartBT.innerHTML = "CART(" + BasQuantity + ")";
 }
@@ -174,16 +178,23 @@ function OpenCart() {
 
 /* Animations for Cart: */
 function OpenCartAnim() {
+  /* Cart Css */
   Cart.style.zIndex = "999";
   Cart.style.transform = " translateX(0px) translateY(0px)";
   Cart.style.opacity = "1";
   Cart.style.width = "100%";
   Cart.style.height = "100%";
 
+  /* HolderCart Css */
   HolderCart.style.height = "50px";
   HolderCart.style.width = "50px";
   HolderCart.style.transform = "translateX(450px) translateY(-400px) ";
   HolderCart.style.opacity = "0";
+  let Temp = HolderCart.innerHTML;
+  HolderCart.innerHTML = "";
+  setTimeout(() => {
+    HolderCart.innerHTML = Temp;
+  }, 2300);
 
   setTimeout(() => {
     HolderCart.style.transform = "translateX(450px) translateY(200px) ";
@@ -207,11 +218,20 @@ function OpenCartAnim() {
   }, 500);
 }
 function CloseCartAnim() {
+  /* Cart Css */
   CloseCartBT.style.opacity = "0";
   CloseCartBT.style.transform = "translateY(-200px)";
 
+  /* HolderCart Css */
   HolderCart.style.width = "50px";
   HolderCart.style.transform = "translateX(450px) ";
+  let Temp = HolderCart.innerHTML;
+  setTimeout(() => {
+    HolderCart.innerHTML = "";
+  }, 150);
+  setTimeout(() => {
+    HolderCart.innerHTML = Temp;
+  }, 2300);
 
   setTimeout(() => {
     HolderCart.style.height = "50px";

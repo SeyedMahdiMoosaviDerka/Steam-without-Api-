@@ -412,7 +412,19 @@
     </div>
   </body>
 
-  <script src="javascript/StoreMenu.js"></script>
+  <script>
+    // Check if the page needs reloading
+    if (!localStorage.getItem('reloaded')) {
+        // If not reloaded yet, reload the page
+        localStorage.setItem('reloaded', true);
+        location.reload();
+    } else {
+        // If already reloaded, remove the 'reloaded' flag from localStorage
+        localStorage.removeItem('reloaded');
+    }
+  </script> 
+
+  <!-- <script src="javascript/StoreMenu.js"></script> -->
   <script src="javascript/GamesDataJason.js"></script>
   
   <script src="javascript/Searching.js"></script>
@@ -423,5 +435,7 @@
 
   <script src="javascript/CreatGamesDataJasonForRecommendedSlider.js"></script>
 
+  
+  
   <!-- <script src="javascript/bigshowfunction.js"></script>
 </html>
