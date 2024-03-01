@@ -23,11 +23,7 @@
     </style>
   </head>
 
-  <body>
-    <!-- <iframe
-        src="html/StoreSection.html"
-        onload="this.before(...(this.contentWindow.document.body||this.contentWindow.document).children);this.remove()"
-      ></iframe> -->
+  <body onselectstart="return false">
     <div id="SteamHolder">
       <!-- SteamMainMenu => -->
       <div id="SteamMainMenu">
@@ -47,14 +43,14 @@
         <a id="StoreSectionBt" onclick="Going_SupportSection()">SUPPORT</a>
       </div>
       <!-- StoreSection => -->
-      <div id="StoreSection" style="display: block">
+      <div id="StoreSection" style="display: block; height: 60px">
         <div class="StoreMenu" id="StoreMenu">
           <div class="StoreMenu_Top">
             <div class="items YourStore">
               You'r Store
               <img
                 class="YourStoreProfile"
-                src="../Media/StoreMenu/profileLogo.png"
+                src="Media/StoreMenu/profileLogo.png"
               />
             </div>
             <div class="items Noteworthy">News and Noteworthy</div>
@@ -65,7 +61,7 @@
             <input class="items Search" placeholder="search" id="MainSearch" />
           </div>
           <video
-            src="../Media/StoreMenu/webm_page_bg_english.mp4"
+            src="Media/StoreMenu/webm_page_bg_english.mp4"
             id="StoreMenuBackgroundVideo"
           ></video>
           <div class="StoreMenu_WishListCart">
@@ -416,11 +412,9 @@
     </div>
   </body>
 
-  <script></script>
-
   <script src="javascript/StoreMenu.js"></script>
   <script src="javascript/GamesDataJason.js"></script>
-
+  
   <script src="javascript/Searching.js"></script>
   <script src="javascript/CreatGamesDataJasonForSearching.js"></script>
   <script src="javascript/Modal.js"></script>
@@ -429,5 +423,5 @@
 
   <script src="javascript/CreatGamesDataJasonForRecommendedSlider.js"></script>
 
-  <!-- <script src="javascript/bigshowfunction.js"></script> -->
+  <!-- <script src="javascript/bigshowfunction.js"></script>
 </html>
