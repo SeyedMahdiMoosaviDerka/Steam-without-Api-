@@ -172,10 +172,10 @@ function OpenWishListAnim() {
   HolderWishList.style.width = "50px";
   HolderWishList.style.transform = "translateX(450px) translateY(-400px) ";
   HolderWishList.style.opacity = "0";
-  let Temp = HolderWishList.innerHTML;
-  HolderWishList.innerHTML = "";
+
+  ShowingGridWishList.style.opacity = 0;
   setTimeout(() => {
-    HolderWishList.innerHTML = Temp;
+    ShowingGridWishList.style.opacity = 1;
   }, 2300);
 
   setTimeout(() => {

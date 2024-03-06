@@ -190,10 +190,15 @@ function OpenCartAnim() {
   HolderCart.style.width = "50px";
   HolderCart.style.transform = "translateX(450px) translateY(-400px) ";
   HolderCart.style.opacity = "0";
-  let Temp = HolderCart.innerHTML;
-  HolderCart.innerHTML = "";
+  // let Temp = HolderCart.innerHTML;
+  // HolderCart.innerHTML = "";
+  ShoingPr = document.querySelectorAll(".ShowPrice");
+  ShowingGridCart.style.opacity = 0;
+  ShoingPr[0].style.opacity = 0;
+
   setTimeout(() => {
-    HolderCart.innerHTML = Temp;
+    ShowingGridCart.style.opacity = 1;
+    ShoingPr[0].style.opacity = 1;
   }, 2300);
 
   setTimeout(() => {
